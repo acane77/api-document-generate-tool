@@ -1,0 +1,46 @@
+[
+    {
+        "section": "大语言模型",
+        "subsections": [
+           {
+               "section": "自然语言问答",
+               "api": [
+                    {
+                        "name": "向LLM Query",
+                        "method": "POST",
+                        "url": "/api/completions",
+                        "request": {
+                            "query": "",
+                            "temperature": 0.01,
+                            "model": "gpt4",
+                            "session_id": 0,
+                            "kb_info": [
+                                { "kb_name": "", "recall": 3 }
+                            ]
+                        },
+                        "request_description":  {
+                            "query": "用户Prompt",
+                            "temperature": "(optional)LLM Temperature",
+                            "model": "(optional)LLM模型名称",
+                            "session_id": "(optional)多轮对话会话ID",
+                            "kb_info": [
+                                {
+                                    "kb_name": "知识库名称",
+                                    "recall": "(optional)召回条数"
+                                }
+                            ]
+                        },
+                        "response": {
+                            "answer": "",
+                            "session_id": 0
+                        },
+                        "response_description": {
+                            "answer": "LLM答案",
+                            "session_id": "会话ID"
+                        }
+                    }
+               ]
+           }
+        ]
+    }
+]
